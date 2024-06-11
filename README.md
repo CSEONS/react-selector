@@ -28,4 +28,20 @@
     <span className="title">Welcome</span>
 </div>
 ```
+на выходе получим:
 
+```
+.container {}
+.header {}
+.title {}
+#mainHeader {}
+```
+
+## Вклад
+Если вы хотите внести свой вклад в развитие этого расширения, пожалуйста, следуйте следующим шагам:
+
+1. Форкните этот репозиторий.
+2. Создайте новую ветку (git checkout -b feature-branch).
+3. Внесите ваши изменения и закоммитьте их (git commit -am 'Add new feature').
+4. Запушьте изменения в свою ветку (git push origin feature-branch).
+5. Создайте новый Pull Request.

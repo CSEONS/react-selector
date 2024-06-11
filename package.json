@@ -1,44 +1,50 @@
 {
-  "name": "react-classes-to-selector",
-  "displayName": "react-classes-to-selector.react-selector",
-  "description": "",
-  "version": "0.0.1",
-  "engines": {
-    "vscode": "^1.90.0"
-  },
-  "categories": [
-    "Other"
-  ],
-  "activationEvents": [],
-  
-  "main": "./extension.js",
-  "contributes": {
-    "commands": [{
-      "command": "react-classes-to-selector.react-selector",
-      "title": "React selector"
-    }],
-    "menus": {
-        "editor/context": [
+    "name": "react-classes-to-selector",
+    "displayName": "React selector select",
+    "description": "",
+    "publisher": "CSEONS",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.90.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/CSEONS/react-selector.git"
+    },
+    "main": "./extension.js",
+    "contributes": {
+        "commands": [
             {
                 "command": "react-classes-to-selector.react-selector",
-                "when": "editorTextFocus && editorLangId == 'javascript' || editorLangId == 'typescript' || editorLangId == 'javascriptreact' || editorLangId == 'typescriptreact'",
-                "group": "navigation"
+                "title": "React selector"
             }
-        ]
+        ],
+        "menus": {
+            "editor/context": [
+                {
+                    "command": "react-classes-to-selector.react-selector",
+                    "when": "editorTextFocus && editorLangId == 'javascript' || editorLangId == 'typescript' || editorLangId == 'javascriptreact' || editorLangId == 'typescriptreact'",
+                    "group": "navigation"
+                }
+            ]
+        }
+    },
+    "scripts": {
+        "lint": "eslint .",
+        "pretest": "npm run lint",
+        "test": "vscode-test"
+    },
+    "devDependencies": {
+        "@types/vscode": "^1.90.0",
+        "@types/mocha": "^10.0.6",
+        "@types/node": "18.x",
+        "eslint": "^8.57.0",
+        "typescript": "^5.4.5",
+        "@vscode/test-cli": "^0.0.9",
+        "@vscode/test-electron": "^2.4.0"
     }
-  },
-  "scripts": {
-    "lint": "eslint .",
-    "pretest": "npm run lint",
-    "test": "vscode-test"
-  },
-  "devDependencies": {
-    "@types/vscode": "^1.90.0",
-    "@types/mocha": "^10.0.6",
-    "@types/node": "18.x",
-    "eslint": "^8.57.0",
-    "typescript": "^5.4.5",
-    "@vscode/test-cli": "^0.0.9",
-    "@vscode/test-electron": "^2.4.0"
-  }
 }
